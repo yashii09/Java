@@ -22,7 +22,27 @@ class traversal {
             System.out.print(curr.data + " ");
             curr = curr.next;
         }
+
         System.out.println();
+    }
+
+    public static void backward_traversal(Node last) {
+        Node curr = last;
+
+        while (curr != null) {
+            System.out.print(curr.data + " ");
+            curr = curr.prev;
+        }
+
+        System.out.println();
+    }
+
+    public static Node get_last_node() {
+        Node curr = head;
+        while (curr != null && curr.next != null) {
+            curr = curr.next;
+        }
+        return curr;
     }
 
     public static void append(int d) {
@@ -56,9 +76,12 @@ class traversal {
             append(data);
         }
 
-        System.out.println("Linked list is: ");
+        System.out.println("Linked list in forward traversal: ");
         forward_traversal(head);
 
+        System.err.println("Linked list in backward traversal: ");
+        Node last = get_last_node();
+        backward_traversal(last);
     }
 
 }
