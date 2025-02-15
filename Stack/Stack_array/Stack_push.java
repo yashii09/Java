@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Stack_push_array {
+public class Stack_push {
     int MAX = 1000;
     int top;
     int stack[] = new int[MAX]; // maximum size of stack
@@ -9,7 +9,7 @@ public class Stack_push_array {
         return (top < 0);
     }
 
-    Stack_push_array() {
+    Stack_push() {
         top = -1;
     }
 
@@ -36,7 +36,7 @@ public class Stack_push_array {
     }
 
     public static void main(String args[]) {
-        Stack_push_array s = new Stack_push_array();
+        Stack_push s = new Stack_push();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of element of stack: ");
